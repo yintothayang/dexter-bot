@@ -5,7 +5,8 @@ const EtherDelta = require('./EtherDelta')
 const log = console.log
 
 // "Web3.providers.givenProvider" will be set if in an Ethereum supported browser.
-const web3 = new Web3(Web3.givenProvider || 'ws://35.171.161.95:8546')
+// const web3 = new Web3(Web3.givenProvider || 'ws://35.171.161.95:8546')
+const web3 = new Web3(Web3.givenProvider || 'ws://127.0.0.1:8546')
 
 
 // // First compile the contract
