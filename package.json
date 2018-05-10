@@ -1,10 +1,10 @@
 {
-  "name": "dexter-api",
+  "name": "dexter-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/bot.ts",
   "scripts": {
-    "serve": "ts-node-dev --respawn --type-check ./src/server.ts",
+    "bot": "ts-node ./src/bot.ts",
     "test": "mocha -r ts-node/register ./tests/**/*.spec.ts"
   },
   "keywords": [],
@@ -20,6 +20,7 @@
     "chai": "^4.1.2",
     "express": "^4.16.3",
     "mocha": "^5.1.1",
+    "solc": "^0.4.23",
     "ts-node": "^6.0.2",
     "ts-node-dev": "^1.0.0-pre.21",
     "typescript": "^2.8.3"
