@@ -33,21 +33,20 @@ const web3 = new Web3(Web3.givenProvider || 'ws://35.171.161.95:8546')
 
 
 
-const sub = web3.eth.subscribe('logs', {address: '0x8d12A197cB00D4747a1fe03395095ce2A5CC6819'}, (error: any, transaction: any) => {
+const deltasub = web3.eth.subscribe('logs', {address: '0x8d12A197cB00D4747a1fe03395095ce2A5CC6819'}, (error: any, transaction: any) => {
   if (!error) {
-    console.log(`Subscription - Pending Transaction: `, transaction);
+    log(`Transaction: `, transaction)
   } else {
-    console.log(`Error - Subscription - Pending Transaction: `, error);
+    log(`Error: `, error)
   }
-}).on("data", function(transaction: any) {
-  log(`Subscription - Pending Transaction Data: `, transaction)
 })
 
 
-// const sub = web3.eth.subscribe('pendingTransactions', { address: '0x8d12A197cB00D4747a1fe03395095ce2A5CC6819'})
-//   .on('data', (transaction: any) => {
-//     log(`Subscription - Pending Transaction Data: `, transaction)
-//   })
+
+
+// const sub = web3.eth.subscribe('pendingTransactions').on('data', (transaction: any) => {
+//   log(`Subscription - Pending Transaction Data: `, transaction)
+// })
 
 
 // async function onEvent(error: any, event: any) {
